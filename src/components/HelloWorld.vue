@@ -2,6 +2,14 @@
 defineProps<{
   msg: string
 }>()
+
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // if (1 === 1) {
+  // }
+  // console.log('666666')
+})
 </script>
 
 <template>

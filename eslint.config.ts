@@ -21,10 +21,19 @@ export default defineConfigWithVueTs(
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
-  
+
   {
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
+  },
+  {
+    rules: {
+      'no-restricted-imports': 0,
+      '@typescript-eslint/no-unused-vars': 2,
+      'no-constant-condition': 'error',
+      'no-self-compare': 'error',
+      eqeqeq: 'error',
+    },
   },
   skipFormatting,
 )
